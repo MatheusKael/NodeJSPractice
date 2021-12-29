@@ -35,7 +35,6 @@ class JSONlineReader extends stream.Readable {
       line = this._buffer.slice(0, lineIndex);
       if (line) {
         result = JSON.parse(line);
-        console.log(result);
         this._buffer = this._buffer.slice(lineIndex + 1);
         this.emit("object", result);
         this.push(util.inspect(result));

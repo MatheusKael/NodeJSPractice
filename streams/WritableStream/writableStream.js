@@ -1,6 +1,8 @@
 const Writable = require("stream").Writable;
 const util = require("util");
 
+// Usage of util.inherits() is discouraged
+
 module.exports = CountStream;
 
 util.inherits(CountStream, Writable);
