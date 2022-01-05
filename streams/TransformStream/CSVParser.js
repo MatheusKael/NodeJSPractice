@@ -55,4 +55,10 @@ CSVParser.prototype.addValue = function () {
   } else {
     this.values.push(this.value);
   }
+
+  this.value = "";
 };
+
+const parser = new CSVParser();
+
+fs.createReadStream(__dirname, +"");
