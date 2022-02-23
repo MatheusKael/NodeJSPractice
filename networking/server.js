@@ -6,6 +6,9 @@ const server = net.createServer(function (client) {
   const clientId = clients;
   console.log("Client connected: " + clientId);
 
+  client.on("error", (err) => {
+    console.log(err);
+  });
   client.on("end", () => {
     console.log("Client disconnected: " + clientId);
   });
